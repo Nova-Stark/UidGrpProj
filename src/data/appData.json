@@ -1,0 +1,137 @@
+{
+  "accounts": [
+    {
+      "id": "acc-1",
+      "name": "HDFC Bank",
+      "type": "Savings Account",
+      "balance": 124580,
+      "cardNumber": "•••• •••• •••• 4821",
+      "gradient": "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+      "bank": "HDFC"
+    },
+    {
+      "id": "acc-2",
+      "name": "SBI Savings",
+      "type": "Savings Account",
+      "balance": 38920,
+      "cardNumber": "•••• •••• •••• 7193",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)",
+      "bank": "SBI"
+    },
+    {
+      "id": "acc-3",
+      "name": "Cash Wallet",
+      "type": "Cash",
+      "balance": 4200,
+      "cardNumber": "—",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+      "bank": "Cash"
+    },
+    {
+      "id": "acc-4",
+      "name": "ICICI Credit",
+      "type": "Credit Card",
+      "balance": -12340,
+      "cardNumber": "•••• •••• •••• 3354",
+      "gradient": "linear-gradient(135deg, #374151 0%, #1f2937 100%)",
+      "bank": "ICICI"
+    },
+    {
+      "id": "acc-5",
+      "name": "Crypto Wallet",
+      "type": "Crypto",
+      "balance": 28400,
+      "cardNumber": "0x7f3a...e91b",
+      "gradient": "linear-gradient(135deg, #f97316 0%, #ea580c 100%)",
+      "bank": "Web3"
+    }
+  ],
+
+  "categories": [
+    { "id": "food",          "label": "Food & Dining",  "color": "#f59e0b", "icon": "utensils"     },
+    { "id": "rent",          "label": "Rent & Housing", "color": "#8b5cf6", "icon": "home"         },
+    { "id": "travel",        "label": "Travel",         "color": "#3b82f6", "icon": "plane"        },
+    { "id": "entertainment", "label": "Entertainment",  "color": "#ec4899", "icon": "film"         },
+    { "id": "health",        "label": "Health",         "color": "#10b981", "icon": "heart"        },
+    { "id": "shopping",      "label": "Shopping",       "color": "#f97316", "icon": "shopping-bag" },
+    { "id": "utilities",     "label": "Utilities",      "color": "#06b6d4", "icon": "zap"          },
+    { "id": "education",     "label": "Education",      "color": "#a78bfa", "icon": "book-open"    },
+    { "id": "salary",        "label": "Salary",         "color": "#10b981", "icon": "briefcase"    },
+    { "id": "freelance",     "label": "Freelance",      "color": "#34d399", "icon": "monitor"      }
+  ],
+
+  "budgets": [
+    { "id": "b-1", "category": "food",          "label": "Food & Dining",  "limit": 10000, "spent": 7400,  "color": "#f59e0b" },
+    { "id": "b-2", "category": "rent",          "label": "Rent & Housing", "limit": 20000, "spent": 20000, "color": "#8b5cf6" },
+    { "id": "b-3", "category": "travel",        "label": "Travel",         "limit": 8000,  "spent": 3200,  "color": "#3b82f6" },
+    { "id": "b-4", "category": "entertainment", "label": "Entertainment",  "limit": 3000,  "spent": 2800,  "color": "#ec4899" },
+    { "id": "b-5", "category": "health",        "label": "Health",         "limit": 5000,  "spent": 1200,  "color": "#10b981" },
+    { "id": "b-6", "category": "shopping",      "label": "Shopping",       "limit": 6000,  "spent": 6800,  "color": "#f97316" },
+    { "id": "b-7", "category": "utilities",     "label": "Utilities",      "limit": 4000,  "spent": 2100,  "color": "#06b6d4" },
+    { "id": "b-8", "category": "education",     "label": "Education",      "limit": 5000,  "spent": 1500,  "color": "#a78bfa" }
+  ],
+
+  "investments": [
+    { "id": "inv-1", "asset": "Nifty 50 Index Fund", "type": "Mutual Fund", "invested": 120000, "currentValue": 138600, "allocation": 32 },
+    { "id": "inv-2", "asset": "HDFC Large Cap",      "type": "Mutual Fund", "invested": 80000,  "currentValue": 91200,  "allocation": 21 },
+    { "id": "inv-3", "asset": "Tata Motors",         "type": "Stocks",      "invested": 45000,  "currentValue": 38700,  "allocation": 12 },
+    { "id": "inv-4", "asset": "Infosys",             "type": "Stocks",      "invested": 60000,  "currentValue": 72000,  "allocation": 16 },
+    { "id": "inv-5", "asset": "Bitcoin",             "type": "Crypto",      "invested": 25000,  "currentValue": 31200,  "allocation": 8  },
+    { "id": "inv-6", "asset": "PPF Account",         "type": "Bonds",       "invested": 50000,  "currentValue": 54200,  "allocation": 11 }
+  ],
+
+  "insights": [
+    { "id": "ins-1", "type": "warning", "iconKey": "trending-up",  "title": "Spending up 18%",       "message": "Your total spending this month is 18% higher than last month." },
+    { "id": "ins-2", "type": "success", "iconKey": "target",       "title": "Savings goal on track", "message": "You're on track to save ₹12,000 this month. Keep it up!" },
+    { "id": "ins-3", "type": "alert",   "iconKey": "alert-circle", "title": "Shopping over budget",  "message": "Shopping expenses exceeded your budget by ₹800 this month." },
+    { "id": "ins-4", "type": "info",    "iconKey": "home",         "title": "Rent is top expense",   "message": "Rent accounts for 38% of your total monthly expenses." },
+    { "id": "ins-5", "type": "warning", "iconKey": "utensils",     "title": "Food spend rising",     "message": "Food & dining spending has increased for 3 consecutive months." },
+    { "id": "ins-6", "type": "success", "iconKey": "briefcase",    "title": "Income stable",         "message": "Your income has been consistent for the past 4 months." }
+  ],
+
+  "profile": {
+    "name": "Alex Morgan",
+    "email": "alex.morgan@example.com",
+    "joinDate": "2024-01-15",
+    "currency": "INR",
+    "preferences": { "theme": "dark", "notifications": true }
+  },
+
+  "activityData": [
+    { "time": "2026-04-15T19:55:47", "amount": -4300, "status": "success" },
+    { "time": "2026-04-14T10:25:33", "amount": -500,  "status": "pending" },
+    { "time": "2026-04-12T13:40:00", "amount": 5000,  "status": "success" },
+    { "time": "2026-04-10T21:05:11", "amount": -2100, "status": "failed"  },
+    { "time": "2026-04-08T08:50:19", "amount": -1500, "status": "success" },
+    { "time": "2026-04-07T20:12:37", "amount": -3000, "status": "success" },
+    { "time": "2026-04-06T16:30:55", "amount": 1200,  "status": "success" },
+    { "time": "2026-04-04T11:48:02", "amount": -4200, "status": "success" },
+    { "time": "2026-04-03T18:05:44", "amount": -1800, "status": "success" },
+    { "time": "2026-04-02T14:22:10", "amount": -2350, "status": "success" },
+    { "time": "2026-04-01T09:15:23", "amount": 30000, "status": "success" },
+    { "time": "2026-03-29T15:10:44", "amount": -900,  "status": "success" },
+    { "time": "2026-03-27T08:35:21", "amount": -3600, "status": "success" },
+    { "time": "2026-03-25T20:00:09", "amount": 8000,  "status": "success" },
+    { "time": "2026-03-23T11:22:57", "amount": -2800, "status": "failed"  },
+    { "time": "2026-03-21T17:45:33", "amount": -1200, "status": "success" },
+    { "time": "2026-03-19T09:55:18", "amount": -4100, "status": "success" },
+    { "time": "2026-03-18T07:30:00", "amount": 25000, "status": "success" },
+    { "time": "2026-03-16T14:10:42", "amount": -950,  "status": "pending" },
+    { "time": "2026-03-14T19:20:15", "amount": -2200, "status": "success" },
+    { "time": "2026-03-12T10:05:38", "amount": 12000, "status": "success" },
+    { "time": "2026-03-10T16:50:04", "amount": -1650, "status": "success" },
+    { "time": "2026-03-08T22:15:29", "amount": -3300, "status": "failed"  },
+    { "time": "2026-03-06T12:40:11", "amount": -700,  "status": "success" },
+    { "time": "2026-03-04T08:05:53", "amount": 4500,  "status": "success" },
+    { "time": "2026-03-01T17:25:47", "amount": -2600, "status": "success" },
+    { "time": "2026-02-27T11:10:33", "amount": -1100, "status": "success" },
+    { "time": "2026-02-25T09:45:19", "amount": 7500,  "status": "success" },
+    { "time": "2026-02-23T20:30:02", "amount": -3800, "status": "pending" },
+    { "time": "2026-02-21T14:55:44", "amount": -900,  "status": "success" },
+    { "time": "2026-02-19T08:20:37", "amount": -2400, "status": "success" },
+    { "time": "2026-02-17T16:05:11", "amount": 6000,  "status": "success" },
+    { "time": "2026-02-15T11:35:28", "amount": -1750, "status": "success" },
+    { "time": "2026-02-13T19:50:05", "amount": -5200, "status": "failed"  },
+    { "time": "2026-02-11T09:15:42", "amount": 3200,  "status": "success" }
+  ]
+}

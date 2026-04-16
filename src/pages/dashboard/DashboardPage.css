@@ -1,0 +1,226 @@
+/* Dashboard */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-greeting h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dashboard-greeting p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Stat Cards */
+.stat-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+.stat-card--balance {
+  border-top: 2px solid var(--accent-green);
+}
+
+.stat-card-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.stat-card-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.stat-card-value.income  { color: var(--accent-green); }
+.stat-card-value.expense { color: var(--accent-red); }
+.stat-card-value.savings { color: var(--accent-purple); }
+
+.stat-card-sub {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.stat-card-sub.positive { color: var(--accent-green); }
+.stat-card-sub.negative { color: var(--accent-red); }
+
+/* Chart Row */
+.dashboard-charts-row {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 16px;
+}
+
+/* Common dash card */
+.dash-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: border-color 0.15s ease;
+}
+
+.dash-card:hover { border-color: var(--border-hover); }
+
+.dash-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dash-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dash-card-sub-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.dash-view-all {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent-green);
+  transition: opacity 0.15s ease;
+}
+.dash-view-all:hover { opacity: 0.75; }
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+/* Donut legend */
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.donut-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* Bottom row */
+.dashboard-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 16px;
+}
+
+/* Recent Transactions */
+.recent-txns-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recent-txn-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.recent-txn-row:last-child { border-bottom: none; }
+
+/* Insight list */
+.insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.insight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border-left: 3px solid transparent;
+}
+
+.insight-item--success { background: rgba(16,185,129,0.07); border-left-color: var(--accent-green); }
+.insight-item--warning { background: rgba(245,158,11,0.07); border-left-color: var(--accent-amber); }
+.insight-item--alert   { background: rgba(239,68,68,0.07);  border-left-color: var(--accent-red); }
+.insight-item--info    { background: rgba(139,92,246,0.07); border-left-color: var(--accent-purple); }
+
+.insight-icon-wrap {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.insight-icon  { font-size: 1rem; flex-shrink: 0; }
+.insight-title { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+.insight-msg   { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+
+@media (max-width: 768px) {
+  .stat-cards-row {
+    grid-template-columns: 1fr 1fr; /* 2 columns for stats instead of 1 is usually nicer on modern phones */
+  }
+
+  .dashboard-charts-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-bottom-row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .stat-cards-row {
+    grid-template-columns: 1fr; /* stack entirely on very narrow phones */
+  }
+}

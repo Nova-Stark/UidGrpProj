@@ -1,0 +1,109 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+  --bg-primary:    #0a0a0f;
+  --bg-secondary:  #111118;
+  --bg-card:       #15151e;
+  --bg-card-hover: #1a1a26;
+  --bg-sidebar:    #0d0d14;
+  --bg-input:      #1a1a26;
+
+  --accent-green:       #10b981;
+  --accent-green-dim:   rgba(16, 185, 129, 0.12);
+  --accent-purple:      #8b5cf6;
+  --accent-purple-dim:  rgba(139, 92, 246, 0.12);
+  --accent-amber:       #f59e0b;
+  --accent-red:         #ef4444;
+  --accent-blue:        #3b82f6;
+
+  --text-primary:   #eeeef2;
+  --text-secondary: #8888a0;
+  --text-muted:     #50505f;
+
+  --border:       rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.13);
+
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 20px;
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --sidebar-width: 220px;
+  --topbar-height: 60px;
+}
+
+/* ── Reset ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 14px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: url('./assets/background.jpg') center/cover fixed no-repeat;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+input, select { font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: #2a2a40; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a55; }
+
+/* ── Shared Utility: section title ────────────────────────────────────────── */
+.section-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* ── Shared transaction row atoms ─────────────────────────────────────────── */
+.txn-icon  { font-size: 1.3rem; flex-shrink: 0; }
+.txn-info  { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.txn-name  { font-size: 0.875rem; font-weight: 500; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.txn-date  { font-size: 0.75rem; color: var(--text-muted); }
+.txn-amount            { font-size: 0.875rem; font-weight: 600; flex-shrink: 0; }
+.txn-amount.income     { color: var(--accent-green); }
+.txn-amount.expense    { color: var(--accent-red); }
+
+/* ── Transaction / Activity icon wrapper ─────────────────────────────────── */
+.txn-icon-wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.txn-icon-wrap--income  { background: var(--accent-green-dim);  color: var(--accent-green); }
+.txn-icon-wrap--expense { background: rgba(255,255,255,0.05);   color: var(--text-muted); }
+
+/* ── Status icons ─────────────────────────────────────────────────────────── */
+.status-icon--success { color: var(--accent-green); }
+.status-icon--failed  { color: var(--accent-red); }
+.status-icon--pending { color: var(--accent-amber); }
+
+/* ── Chart legend dot ─────────────────────────────────────────────────────── */
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

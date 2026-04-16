@@ -1,0 +1,172 @@
+/* Accounts Page */
+.accounts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.accounts-summary {
+  margin-bottom: 4px;
+}
+
+.accounts-summary-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.accounts-summary-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+/* Account Cards Grid */
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.account-card {
+  border-radius: var(--radius-xl);
+  padding: 22px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 160px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.account-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.account-card-type {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.account-card-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.account-card-bank {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+  background: rgba(0,0,0,0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.account-card-balance { flex: 1; }
+
+.account-card-balance-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 3px;
+}
+
+.account-card-balance-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.account-card-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 10px;
+}
+
+.account-card-number {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+}
+
+/* Recent by account */
+.accounts-recent-section { display: flex; flex-direction: column; gap: 16px; }
+
+.account-recent-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+}
+
+.account-recent-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.account-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.account-recent-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.account-recent-type {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.acct-txn-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.acct-txn-icon--income  { background: var(--accent-green-dim); color: var(--accent-green); }
+.acct-txn-icon--expense { background: rgba(255,255,255,0.04);  color: var(--text-muted); }
+
+.account-no-txns {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.account-txn-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.account-txn-row:last-child { border-bottom: none; }

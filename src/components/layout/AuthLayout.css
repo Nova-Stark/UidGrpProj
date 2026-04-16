@@ -1,0 +1,54 @@
+/* Auth Layout */
+.auth-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: url('../../assets/background.jpg') center/cover no-repeat;
+}
+
+.auth-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(10, 10, 15, 0.4);
+}
+
+.auth-center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 16px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-brand {
+  text-align: center;
+}
+
+.auth-logo {
+  font-size: 2rem;
+  color: var(--accent-green);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.auth-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+  letter-spacing: -0.5px;
+}
+
+.auth-tagline {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}

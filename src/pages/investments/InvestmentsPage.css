@@ -1,0 +1,167 @@
+/* Investments Page */
+.investments-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portfolio-summary-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.portfolio-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  transition: border-color 0.15s ease;
+}
+
+.portfolio-card:hover { border-color: var(--border-hover); }
+
+.portfolio-card--main {
+  border-top: 2px solid var(--accent-green);
+}
+
+.portfolio-card.gain  { border-top: 2px solid var(--accent-green); }
+.portfolio-card.loss  { border-top: 2px solid var(--accent-red); }
+
+.portfolio-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.portfolio-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.portfolio-gainloss {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.portfolio-pct {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.gain .portfolio-gainloss { color: var(--accent-green); }
+.loss .portfolio-gainloss { color: var(--accent-red); }
+
+/* Main layout */
+.investments-row {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 16px;
+}
+
+.investments-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: border-color 0.15s ease;
+}
+
+.investments-card:hover { border-color: var(--border-hover); }
+
+.investments-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* Asset List */
+.asset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.asset-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.12s ease;
+}
+
+.asset-row:last-child { border-bottom: none; }
+.asset-row:hover { background: var(--bg-card-hover); border-radius: var(--radius-md); padding-left: 8px; padding-right: 8px; }
+
+.asset-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.asset-info { flex: 1; min-width: 0; }
+
+.asset-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.asset-type {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.asset-financials { text-align: right; flex-shrink: 0; }
+
+.asset-current {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.asset-gl {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.asset-gl.positive { color: var(--accent-green); }
+.asset-gl.negative { color: var(--accent-red); }
+
+/* Allocation legend */
+.allocation-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.allocation-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .portfolio-summary-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .investments-row {
+    grid-template-columns: 1fr;
+  }
+}
