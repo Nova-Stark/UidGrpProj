@@ -1,7 +1,5 @@
-/* ── Google Fonts ─────────────────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ── Design Tokens ────────────────────────────────────────────────────────── */
 :root {
   --bg-primary:    #0a0a0f;
   --bg-secondary:  #111118;
@@ -31,13 +29,12 @@
   --radius-xl:  16px;
   --radius-2xl: 20px;
 
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font: 'Inter', sans-serif;
 
   --sidebar-width: 220px;
   --topbar-height: 60px;
 }
 
-/* ── Reset ────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { font-size: 14px; scroll-behavior: smooth; }
@@ -57,13 +54,11 @@ a { text-decoration: none; color: inherit; }
 ul, ol { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* ── Scrollbar ────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
 ::-webkit-scrollbar-thumb { background: #2a2a40; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #3a3a55; }
 
-/* ── Shared Utility: section title ────────────────────────────────────────── */
 .section-title {
   font-size: 0.95rem;
   font-weight: 600;
@@ -71,7 +66,6 @@ img { max-width: 100%; display: block; }
   margin-bottom: 16px;
 }
 
-/* ── Shared transaction row atoms ─────────────────────────────────────────── */
 .txn-icon  { font-size: 1.3rem; flex-shrink: 0; }
 .txn-info  { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
 .txn-name  { font-size: 0.875rem; font-weight: 500; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -80,7 +74,6 @@ img { max-width: 100%; display: block; }
 .txn-amount.income     { color: var(--accent-green); }
 .txn-amount.expense    { color: var(--accent-red); }
 
-/* ── Transaction / Activity icon wrapper ─────────────────────────────────── */
 .txn-icon-wrap {
   width: 30px;
   height: 30px;
@@ -94,12 +87,10 @@ img { max-width: 100%; display: block; }
 .txn-icon-wrap--income  { background: var(--accent-green-dim);  color: var(--accent-green); }
 .txn-icon-wrap--expense { background: rgba(255,255,255,0.05);   color: var(--text-muted); }
 
-/* ── Status icons ─────────────────────────────────────────────────────────── */
 .status-icon--success { color: var(--accent-green); }
 .status-icon--failed  { color: var(--accent-red); }
 .status-icon--pending { color: var(--accent-amber); }
 
-/* ── Chart legend dot ─────────────────────────────────────────────────────── */
 .legend-dot {
   display: inline-block;
   width: 8px;

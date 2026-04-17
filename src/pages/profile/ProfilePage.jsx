@@ -31,7 +31,6 @@ export default function ProfilePage() {
 
   return (
     <div className="profile-page">
-      {/* Header */}
       <div className="profile-header">
         <div className="profile-avatar-large">{initials}</div>
         <div className="profile-header-info">
@@ -43,7 +42,6 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      {/* Stats */}
       <div className="profile-stats-row">
         <div className="profile-stat-card">
           <p className="profile-stat-label">Total Balance</p>
@@ -63,7 +61,6 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      {/* Activity */}
       <div className="profile-activity-card">
         <h3 className="profile-section-title">Recent Activity</h3>
         <div className="activity-table-header">

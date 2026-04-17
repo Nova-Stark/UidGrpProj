@@ -46,7 +46,6 @@ export default function AccountsPage() {
         ))}
       </div>
 
-      {/* Recent activity per account — sorted by date descending */}
       <div className="accounts-recent-section">
         <h3 className="section-title">Recent Activity by Account</h3>
         {accountsList.map(account => {

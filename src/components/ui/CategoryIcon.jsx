@@ -15,7 +15,6 @@ const iconMap = {
   education:     BookOpen,
   salary:        Briefcase,
   freelance:     Monitor,
-  // insight icon keys
   'trending-up': TrendingUp,
   'alert-circle':AlertCircle,
   target:        Target,

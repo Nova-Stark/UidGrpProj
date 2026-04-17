@@ -6,7 +6,6 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
 
   const login = (email, password) => {
-    // Simulate login — accept any non-empty credentials
     if (email && password) {
       setUser({ name: 'Alex Morgan', email, avatar: null, joinDate: '2024-01-15' })
       return true

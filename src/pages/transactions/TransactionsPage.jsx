@@ -1,19 +1,16 @@
 import { useState } from 'react'
-import { transactions, categories, formatCurrency } from '../../data/mockData'
+import { transactions, formatCurrency } from '../../data/mockData'
 import { Search, TrendingUp, TrendingDown } from 'lucide-react'
-import CategoryIcon from '../../components/ui/CategoryIcon'
 import './TransactionsPage.css'
 
 export default function TransactionsPage() {
   const [search, setSearch]           = useState('')
   const [typeFilter, setTypeFilter]   = useState('all')
-  const [categoryFilter, setCategoryFilter] = useState('all')
 
   const filtered = transactions.filter(t => {
     const matchSearch   = t.name.toLowerCase().includes(search.toLowerCase())
     const matchType     = typeFilter === 'all' || t.type === typeFilter
-    const matchCategory = categoryFilter === 'all' || t.category === categoryFilter
-    return matchSearch && matchType && matchCategory
+    return matchSearch && matchType
   })
 
   return (
@@ -36,12 +33,6 @@ export default function TransactionsPage() {
             <option value="expense">Expense</option>
           </select>
 
-          <select id="category-filter" value={categoryFilter} onChange={e => setCategoryFilter(e.target.value)}>
-            <option value="all">All Categories</option>
-            {categories.map(c => (
-              <option key={c.id} value={c.id}>{c.label}</option>
-            ))}
-          </select>
         </div>
       </div>
 
@@ -55,7 +46,7 @@ export default function TransactionsPage() {
             <span className={`txn-icon-wrap txn-icon-wrap--${t.type}`}>
               {t.type === 'income'
                 ? <TrendingUp size={14} />
-                : <CategoryIcon category={t.category} size={14} />}
+                : <TrendingDown size={14} />}
             </span>
 
             <div className="txn-info">
@@ -67,16 +58,6 @@ export default function TransactionsPage() {
 
             <div className="txn-meta">
               <span className="txn-account">{t.account}</span>
-              <span
-                className="txn-category-badge"
-                style={{
-                  background: t.categoryColor + '1a',
-                  color: t.categoryColor,
-                  border: `1px solid ${t.categoryColor}33`,
-                }}
-              >
-                {t.categoryLabel}
-              </span>
             </div>
 
             <span className={`txn-amount ${t.type}`}>

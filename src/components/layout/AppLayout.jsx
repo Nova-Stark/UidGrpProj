@@ -11,7 +11,6 @@ export default function AppLayout() {
     <div className="app-layout">
       <Sidebar isOpen={mobileMenuOpen} closeMenu={() => setMobileMenuOpen(false)} />
       
-      {/* Mobile overlay backdrop */}
       {mobileMenuOpen && <div className="mobile-overlay" onClick={() => setMobileMenuOpen(false)} />}
       
       <div className="app-main">

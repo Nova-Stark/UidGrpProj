@@ -27,11 +27,8 @@ function dateAgo(daysAgo) {
   return d.toISOString()
 }
 
-// Generate transactions spread across 160 days, newest first.
-// Realistic mix: ~20% income events, ~80% expenses — interspersed by date.
 const incomeCategories = ['salary', 'freelance']
 const allTxns = Array.from({ length: 80 }, (_, i) => {
-  // Scatter income roughly every 5th entry, based on day offset
   const daysAgo   = i * 2
   const isIncome  = (i % 5 === 0) || (i % 13 === 0)
   const category  = isIncome
@@ -56,7 +53,6 @@ const allTxns = Array.from({ length: 80 }, (_, i) => {
   }
 })
 
-// Sort by date descending so latest transactions appear first
 export const transactions = allTxns.sort((a, b) => new Date(b.date) - new Date(a.date))
 
 export const incomeEntries = Array.from({ length: 30 }, (_, i) => {

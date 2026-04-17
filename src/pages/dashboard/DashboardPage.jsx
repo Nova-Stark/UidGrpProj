@@ -48,7 +48,6 @@ export default function DashboardPage() {
         <p>Here's your financial overview for today.</p>
       </div>
 
-      {/* Stat Cards */}
       <div className="stat-cards-row">
         <div className="stat-card stat-card--balance">
           <div className="stat-card-label"><Wallet size={15} /> Total Balance</div>
@@ -72,7 +71,6 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Charts Row */}
       <div className="dashboard-charts-row">
         <div className="dash-card cash-flow-card">
           <div className="dash-card-header">
@@ -135,7 +133,6 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Bottom Row */}
       <div className="dashboard-bottom-row">
         <div className="dash-card recent-txns-card">
           <div className="dash-card-header">
