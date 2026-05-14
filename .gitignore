@@ -1,3 +1,6 @@
-references/
+#references/
 
 node_modules/
+.gemini/ 
+graphify-out/
+GEMINI.md
