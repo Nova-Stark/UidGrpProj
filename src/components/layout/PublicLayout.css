@@ -1,0 +1,124 @@
+.public-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.public-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.public-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.public-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  background: var(--accent-green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.logo-text {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.public-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.login-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.signup-btn {
+  padding: 7px 18px;
+  background: var(--accent-green);
+  color: white;
+  border-radius: var(--radius-md);
+}
+
+.signup-btn:hover {
+  filter: brightness(1.1);
+}
+
+.public-main {
+  flex: 1;
+}
+
+.public-footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  background-color: var(--bg-secondary);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .public-header-container {
+    height: 60px;
+  }
+  
+  .public-nav {
+    gap: 12px;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+  }
+  
+  .login-btn, .signup-btn {
+    padding: 4px 10px;
+  }
+}

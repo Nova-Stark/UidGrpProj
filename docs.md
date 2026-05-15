@@ -83,3 +83,22 @@ Every page folder contains a single `.jsx` UI component and its tightly coupled 
 - **`src/pages/insights/InsightsPage.jsx`**: Maps over `appData.json` generated alerts to give human-readable guidance. Alters the color, background badge, and left-border color of the cards dynamically based on the priority level (success, info, warning, alert).
 - **`src/pages/profile/ProfilePage.jsx`**: Displays the user's initials, generated avatar, and join date alongside a highly-detailed, 3-column chronological "Activity" log simulating a real 160-day historical banking feed.
 - **`src/pages/settings/SettingsPage.jsx`**: A mocked configuration panel managing user preferences like default application currency variants, week-start dates, notification toggles, and dynamic styling dots.
+
+---
+
+## 👥 Team & Contributions
+
+### Project Team (4 Members)
+
+| Member | Role | Key Contributions |
+|---|---|---|
+| **Member One** | Lead Developer | Dashboard architecture, Recharts integration, global layout. |
+| **Member Two** | Logic & Backend Simulation | AuthContext, login/signup flows, mock data generation. |
+| **Member Three** | UI/UX & Public Pages | PublicLayout, Home/About/Contact pages, Branding (Finio). |
+| **Member Four** | QA & Technical Writing | Insights, Profile activity logic, Developer Documentation (docs.md). |
+
+### Contribution Breakdown
+- **Architecture**: Design of the component tree and routing was spearheaded by Member One.
+- **Security**: Member Two implemented the JWT-simulation and protected route guarding.
+- **Brand Identity**: Member Three established the "Finio" aesthetic and built the public-facing marketing pages.
+- **Documentation**: Member Four maintains this technical guide and the project's README.

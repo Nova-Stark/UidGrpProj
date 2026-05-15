@@ -1,0 +1,192 @@
+.about-page {
+  color: var(--text-primary);
+}
+
+.about-hero {
+  padding: 100px 0;
+  background-color: var(--bg-secondary);
+  text-align: center;
+}
+
+.hero-animation-wrapper {
+  animation: fadeInFadeUp 0.8s ease-out forwards;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.about-hero .highlight {
+  color: var(--accent-green);
+}
+
+.about-hero .lead {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.about-content {
+  padding: 100px 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 100px;
+}
+
+.text-block h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.text-block p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.tech-stack-section {
+  background: var(--bg-card);
+  padding: 60px;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border);
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tech-item strong {
+  font-size: 1.25rem;
+  color: var(--accent-green);
+}
+
+.tech-item span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.team-section {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 50px;
+}
+
+.team-member {
+  background: var(--bg-secondary);
+  padding: 40px;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.member-avatar {
+  width: 70px;
+  height: 70px;
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 24px;
+}
+
+.team-member h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.team-member .role {
+  color: var(--accent-green);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-member .description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.phase-link-section {
+  text-align: center;
+  padding-top: 60px;
+  border-top: 1px solid var(--border);
+}
+
+.phase-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent-green);
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeInFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  .tech-stack-section {
+    padding: 30px;
+  }
+}

@@ -41,6 +41,33 @@ src/
 └── index.css         # Global design tokens and base styles
 ```
 
+## Screenshots
+
+_Add your final website screenshots here. Examples below:_
+
+- **Public Landing Page**
+  ![Landing Page Placeholder](https://via.placeholder.com/1200x600?text=Finio+Landing+Page)
+- **Main Dashboard**
+  ![Dashboard Placeholder](https://via.placeholder.com/1200x600?text=Finio+Dashboard)
+- **Accounts & Transactions**
+  ![Transactions Placeholder](https://via.placeholder.com/1200x600?text=Finio+Transactions)
+
+## Team Members
+
+| Name | Role | Primary Responsibilities |
+|---|---|---|
+| **Member One** | Team Lead | Frontend Architecture & Dashboard implementation |
+| **Member Two** | Logic Dev | Authentication flow, Context API & Data logic |
+| **Member Three** | UI/UX Designer | Visual design, Branding & Interactive components |
+| **Member Four** | QA & Docs | Documentation, testing & Feature verification |
+
+## Contribution Breakdown
+
+- **Member One**: Designed the core dashboard, integrated Recharts for cash flow analysis, and built the layout shell.
+- **Member Two**: Developed the `AuthContext`, implemented protected routing, and managed the mock data structures.
+- **Member Three**: Created the public landing/about pages, developed the dark-theme design system, and stylized UI components.
+- **Member Four**: Authored the technical documentation, implemented the Insights and Settings modules, and performed cross-browser testing.
+
 ## Getting Started
 
 ```bash

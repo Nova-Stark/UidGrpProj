@@ -16,20 +16,27 @@ import BudgetsPage    from './pages/budgets/BudgetsPage'
 import InsightsPage   from './pages/insights/InsightsPage'
 import ProfilePage    from './pages/profile/ProfilePage'
 import SettingsPage   from './pages/settings/SettingsPage'
+import PublicLayout from './components/layout/PublicLayout'
+import HomePage     from './pages/home/HomePage'
+import AboutPage    from './pages/about/AboutPage'
+import ContactPage  from './pages/contact/ContactPage'
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="/"       element={<PublicLayout><HomePage  /></PublicLayout>} />
+          <Route path="/about"  element={<PublicLayout><AboutPage /></PublicLayout>} />
+          <Route path="/contact" element={<PublicLayout><ContactPage /></PublicLayout>} />
           <Route path="/login"  element={<AuthLayout><LoginPage  /></AuthLayout>} />
           <Route path="/signup" element={<AuthLayout><SignupPage /></AuthLayout>} />
 
           <Route element={<ProtectedRoute />}>
             <Route element={<AppLayout />}>
-              <Route index element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard"    element={<DashboardPage   />} />
               <Route path="/accounts"     element={<AccountsPage    />} />
+
               <Route path="/transactions" element={<TransactionsPage />} />
               <Route path="/spending"     element={<SpendingPage    />} />
               <Route path="/income"       element={<IncomePage      />} />
