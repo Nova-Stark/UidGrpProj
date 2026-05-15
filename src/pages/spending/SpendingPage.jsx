@@ -22,42 +22,40 @@ const expenseData    = monthlyData.map(m => ({ month: m.month, expense: m.expens
 export default function SpendingPage() {
   return (
     <div className="spending-page">
-      <div className="spending-top-row">
-        <div className="spending-card spending-donut-card">
-          <div className="spending-card-header"><h3>Spending by Category</h3></div>
-          <ResponsiveContainer width="100%" height={220}>
-            <PieChart>
-              <Pie data={categoryData} cx="50%" cy="50%" innerRadius={55} outerRadius={85}
-                dataKey="value" paddingAngle={3}>
-                {categoryData.map((entry, i) => (
-                  <Cell key={i} fill={entry.color || COLORS[i % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip
-                contentStyle={{ background: '#1c1c28', border: '1px solid #2a2a3a', borderRadius: 8, fontSize: 12 }}
-                formatter={v => [formatCurrency(v)]}
-              />
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
+      <div className="spending-card spending-donut-card">
+        <div className="spending-card-header"><h3>Spending by Category</h3></div>
+        <ResponsiveContainer width="100%" height={220}>
+          <PieChart>
+            <Pie data={categoryData} cx="50%" cy="50%" innerRadius={55} outerRadius={85}
+              dataKey="value" paddingAngle={3}>
+              {categoryData.map((entry, i) => (
+                <Cell key={i} fill={entry.color || COLORS[i % COLORS.length]} />
+              ))}
+            </Pie>
+            <Tooltip
+              contentStyle={{ background: '#1c1c28', border: '1px solid #2a2a3a', borderRadius: 8, fontSize: 12 }}
+              formatter={v => [formatCurrency(v)]}
+            />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
 
-        <div className="spending-card spending-list-card">
-          <div className="spending-card-header"><h3>Category Breakdown</h3></div>
-          <div className="spending-category-list">
-            {categoryData.map((c, i) => (
-              <div key={c.name} className="spending-category-row">
-                <div className="spending-cat-left">
-                  <span className="spending-rank">#{i + 1}</span>
-                  <span className="spending-cat-dot" style={{ background: c.color || COLORS[i % COLORS.length] }} />
-                  <span className="spending-cat-name">{c.name}</span>
-                </div>
-                <div className="spending-cat-right">
-                  <span className="spending-cat-amount">{formatCurrency(c.value)}</span>
-                  <span className="spending-cat-pct">{((c.value / totalSpending) * 100).toFixed(1)}%</span>
-                </div>
+      <div className="spending-card spending-list-card">
+        <div className="spending-card-header"><h3>Category Breakdown</h3></div>
+        <div className="spending-category-list">
+          {categoryData.map((c, i) => (
+            <div key={c.name} className="spending-category-row">
+              <div className="spending-cat-left">
+                <span className="spending-rank">#{i + 1}</span>
+                <span className="spending-cat-dot" style={{ background: c.color || COLORS[i % COLORS.length] }} />
+                <span className="spending-cat-name">{c.name}</span>
               </div>
-            ))}
-          </div>
+              <div className="spending-cat-right">
+                <span className="spending-cat-amount">{formatCurrency(c.value)}</span>
+                <span className="spending-cat-pct">{((c.value / totalSpending) * 100).toFixed(1)}%</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
