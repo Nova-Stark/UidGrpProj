@@ -78,18 +78,17 @@
 /* Chart Row */
 .dashboard-charts-row {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 340px);
+  grid-template-columns: 1fr 340px;
   gap: 16px;
   align-items: flex-start;
-  width: 100%;
 }
 
 .cash-flow-card {
-  min-width: 0;
+  grid-column: 1;
 }
 
 .spending-donut-card {
-  min-width: 0;
+  grid-column: 2;
 }
 
 /* Common dash card */
@@ -160,18 +159,17 @@
 /* Bottom row */
 .dashboard-bottom-row {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 360px);
+  grid-template-columns: 1fr 360px;
   gap: 20px;
   align-items: flex-start;
-  width: 100%;
 }
 
 .recent-txns-card {
-  min-width: 0;
+  grid-column: 1;
 }
 
 .insights-card {
-  min-width: 0;
+  grid-column: 2;
 }
 
 /* Recent Transactions */
@@ -226,29 +224,21 @@
 .insight-title { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
 .insight-msg   { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
 
-@media (max-width: 1024px) {
-  .dashboard-charts-row,
+@media (max-width: 768px) {
+  .stat-cards-row {
+    grid-template-columns: 1fr 1fr; /* 2 columns for stats instead of 1 is usually nicer on modern phones */
+  }
+
+  .dashboard-charts-row {
+    grid-template-columns: 1fr;
+  }
+
   .dashboard-bottom-row {
     grid-template-columns: 1fr;
   }
-
-  .stat-cards-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
-
-@media (max-width: 768px) {
-  .dashboard-page {
-    gap: 16px;
-  }
-  
-  .stat-card {
-    padding: 16px;
-  }
-}
-
 @media (max-width: 480px) {
   .stat-cards-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* stack entirely on very narrow phones */
   }
 }

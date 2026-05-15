@@ -20,9 +20,9 @@ const HomePage = () => {
           </div>
           <div className="hero-visual">
             <div className="abstract-dashboard">
-              <div className="dash-card card-1"></div>
-              <div className="dash-card card-2"></div>
-              <div className="dash-card card-3"></div>
+              <div className="hero-mock-card card-1"></div>
+              <div className="hero-mock-card card-2"></div>
+              <div className="hero-mock-card card-3"></div>
             </div>
           </div>
         </div>

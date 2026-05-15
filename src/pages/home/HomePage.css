@@ -94,7 +94,7 @@
   }
 }
 
-.dash-card {
+.hero-mock-card {
   position: absolute;
   background: var(--bg-card);
   border: 1px solid var(--border);
