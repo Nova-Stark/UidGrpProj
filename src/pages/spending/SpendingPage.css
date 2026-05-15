@@ -22,8 +22,13 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 20px;
-  transition: border-color 0.15s ease;
+  opacity: 0;
+  animation: fadeInFadeUp 0.6s ease-out forwards;
 }
+
+.spending-donut-card { grid-column: 1; animation-delay: 0.1s; }
+.spending-list-card { grid-column: 2; animation-delay: 0.2s; }
+.spending-trend-card { grid-column: 1 / -1; animation-delay: 0.3s; }
 
 .spending-card:hover { border-color: var(--border-hover); }
 

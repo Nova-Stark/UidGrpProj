@@ -98,3 +98,42 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   flex-shrink: 0;
 }
+
+/* Global Animations */
+@keyframes fadeInFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Global Card Interaction */
+.dash-card, .stat-card, .spending-card, .auth-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s ease;
+}
+
+.dash-card:hover, .stat-card:hover, .spending-card:hover, .auth-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
