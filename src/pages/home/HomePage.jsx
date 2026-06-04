@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { LineChart, PieChart, Wallet, ArrowUpRight, TrendingUp } from 'lucide-react'
 import './HomePage.css'
 
 const HomePage = () => {
@@ -20,9 +21,49 @@ const HomePage = () => {
           </div>
           <div className="hero-visual">
             <div className="abstract-dashboard">
-              <div className="hero-mock-card card-1"></div>
-              <div className="hero-mock-card card-2"></div>
-              <div className="hero-mock-card card-3"></div>
+              <div className="hero-mock-card card-1">
+                <div className="card-header">
+                  <span>Total Balance</span>
+                  <TrendingUp size={16} className="text-green" />
+                </div>
+                <div className="card-value">$24,500.00</div>
+                <div className="mock-chart">
+                  <div className="chart-bar" style={{height: '40%'}}></div>
+                  <div className="chart-bar" style={{height: '70%'}}></div>
+                  <div className="chart-bar" style={{height: '50%'}}></div>
+                  <div className="chart-bar" style={{height: '90%'}}></div>
+                  <div className="chart-bar" style={{height: '60%'}}></div>
+                </div>
+              </div>
+              <div className="hero-mock-card card-2">
+                <div className="card-header">
+                  <span>Analytics</span>
+                  <PieChart size={16} />
+                </div>
+                <div className="mock-lines">
+                  <div className="mock-line-item">
+                    <div className="line-label">Housing</div>
+                    <div className="line-bar"><div className="line-fill" style={{width: '45%'}}></div></div>
+                  </div>
+                  <div className="mock-line-item">
+                    <div className="line-label">Food</div>
+                    <div className="line-bar"><div className="line-fill" style={{width: '25%'}}></div></div>
+                  </div>
+                </div>
+              </div>
+              <div className="hero-mock-card card-3">
+                <div className="card-header">
+                  <Wallet size={16} />
+                  <span>Recent</span>
+                </div>
+                <div className="transaction-item">
+                  <div className="tx-info">
+                    <div className="tx-name">Apple Store</div>
+                    <div className="tx-date">Today</div>
+                  </div>
+                  <div className="tx-amount negative">-$199</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

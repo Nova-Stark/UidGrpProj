@@ -89,6 +89,106 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.mock-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 60px;
+  margin-top: auto;
+}
+
+.chart-bar {
+  flex: 1;
+  background: var(--accent-green-dim);
+  border-radius: 2px 2px 0 0;
+  transition: height 1s ease-out;
+}
+
+.chart-bar:nth-child(even) {
+  background: var(--accent-green);
+}
+
+.mock-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mock-line-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.line-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.line-bar {
+  height: 6px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.line-fill {
+  height: 100%;
+  background: var(--accent-green);
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.tx-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tx-date {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.tx-amount {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.tx-amount.negative {
+  color: #ff4d4d;
+}
+
+.text-green {
+  color: var(--accent-green);
 }
 
 .card-1 {

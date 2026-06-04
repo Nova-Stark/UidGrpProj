@@ -84,9 +84,8 @@ const ContactPage = () => {
             <div className="contact-info">
               <div className="info-block">
                 <h3>Location</h3>
-                <p>College of Engineering and Technology</p>
-                <p>Department of Computer Science & Engineering</p>
-                <p>University Campus, City Name</p>
+                <p>Amrita Vishwa Vidyapeetham</p>
+                <p>Kollam, Kerala, India</p>
               </div>
 
               <div className="info-block">
@@ -99,7 +98,7 @@ const ContactPage = () => {
                 <h3>Connect with the Team</h3>
                 <ul className="social-links">
                   <li>
-                    <strong>Member One</strong>
+                    <strong>Aadi</strong>
                     <div className="links">
                       <a href="https://github.com/placeholder1">GitHub</a>
                       <span>•</span>
@@ -107,7 +106,7 @@ const ContactPage = () => {
                     </div>
                   </li>
                   <li>
-                    <strong>Member Two</strong>
+                    <strong>Adish</strong>
                     <div className="links">
                       <a href="https://github.com/placeholder2">GitHub</a>
                       <span>•</span>
@@ -115,7 +114,7 @@ const ContactPage = () => {
                     </div>
                   </li>
                   <li>
-                    <strong>Member Three</strong>
+                    <strong>Varun</strong>
                     <div className="links">
                       <a href="https://github.com/placeholder3">GitHub</a>
                       <span>•</span>
@@ -123,7 +122,7 @@ const ContactPage = () => {
                     </div>
                   </li>
                   <li>
-                    <strong>Member Four</strong>
+                    <strong>Bal Govind</strong>
                     <div className="links">
                       <a href="https://github.com/placeholder4">GitHub</a>
                       <span>•</span>

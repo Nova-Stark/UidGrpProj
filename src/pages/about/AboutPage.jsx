@@ -38,7 +38,7 @@ const AboutPage = () => {
             <h2>Technology Stack</h2>
             <div className="tech-grid">
               <div className="tech-item">
-                <strong>React 18</strong>
+                <strong>React 18.3</strong>
                 <span>UI Core</span>
               </div>
               <div className="tech-item">
@@ -60,26 +60,26 @@ const AboutPage = () => {
             <h2>The Team</h2>
             <div className="team-grid">
               <div className="team-member">
-                <div className="member-avatar">M1</div>
-                <h3>Member One</h3>
+                <div className="member-avatar">AA</div>
+                <h3>Aadi</h3>
                 <p className="role">Frontend Lead & Dashboard</p>
                 <p className="description">Focused on the core dashboard layout and real-time chart integrations.</p>
               </div>
               <div className="team-member">
-                <div className="member-avatar">M2</div>
-                <h3>Member Two</h3>
+                <div className="member-avatar">AD</div>
+                <h3>Adish</h3>
                 <p className="role">Auth & Logic</p>
                 <p className="description">Implemented the secure authentication flow and context management.</p>
               </div>
               <div className="team-member">
-                <div className="member-avatar">M3</div>
-                <h3>Member Three</h3>
+                <div className="member-avatar">VA</div>
+                <h3>Varun</h3>
                 <p className="role">UI/UX & Branding</p>
                 <p className="description">Designed the dark-themed aesthetic and interactive components.</p>
               </div>
               <div className="team-member">
-                <div className="member-avatar">M4</div>
-                <h3>Member Four</h3>
+                <div className="member-avatar">BG</div>
+                <h3>Bal Govind</h3>
                 <p className="role">Documentation & Testing</p>
                 <p className="description">Managed project documentation and ensured component-level functional integrity.</p>
               </div>
